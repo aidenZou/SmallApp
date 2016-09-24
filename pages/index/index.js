@@ -46,31 +46,6 @@ Page( {
       {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'}
     ]
   },
-  changeIndicatorDots: function( e ) {
-    this.setData( {
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeVertical: function( e ) {
-    this.setData( {
-      vertical: !this.data.vertical
-    })
-  },
-  changeAutoplay: function( e ) {
-    this.setData( {
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function( e ) {
-    this.setData( {
-      interval: e.detail.value
-    })
-  },
-  durationChange: function( e ) {
-    this.setData( {
-      duration: e.detail.value
-    })
-  },
 
   //事件处理函数
   bindViewTap: function() {
