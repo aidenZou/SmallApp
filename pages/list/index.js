@@ -1,4 +1,3 @@
-//index.js
 Page({
   data: {
     title: '',
@@ -6,14 +5,11 @@ Page({
   },
   //事件处理函数
   onLoad: function (options) {
-    console.log('onLoad')
-    console.log(options)
     this.title = options.type || '列表'
   },
   onReady: function () {
-    console.log('onReady')
     wx.setNavigationBarTitle({
       title: this.title
     })
-  }
+  },
 })

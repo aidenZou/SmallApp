@@ -15,7 +15,7 @@ Page( {
     ],
     indicatorDots: true,
     vertical: false,
-    autoplay: false,
+    autoplay: true,
     interval: 3000,
     duration: 1200,
     // nav
@@ -53,6 +53,11 @@ Page( {
       url: '../logs/logs'
     })
   },
+  swiperchange: function(e) {
+    //FIXME: 当前页码
+    //console.log(e.detail.current)
+  },
+
   onLoad: function() {
     console.log( 'onLoad' )
     var that = this
@@ -65,8 +70,6 @@ Page( {
     })
   },
   go: function(event) {
-    console.log(event)
-    console.log(event.currentTarget.dataset.type)
     wx.navigateTo({
       url: '../list/index?type=' + event.currentTarget.dataset.type
     })

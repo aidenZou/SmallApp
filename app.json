@@ -11,7 +11,8 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "Small App",
     "navigationBarBackgroundColor": "#0767c8",
-    "backgroundColor": "#fbf9fe"
+    "backgroundColor": "#fbf9fe",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#dddddd",
