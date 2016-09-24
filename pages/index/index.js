@@ -15,7 +15,7 @@ Page( {
     ],
     indicatorDots: true,
     vertical: false,
-    autoplay: false,
+    autoplay: true,
     interval: 3000,
     duration: 1200,
     // nav
@@ -46,31 +46,6 @@ Page( {
       {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'}
     ]
   },
-  changeIndicatorDots: function( e ) {
-    this.setData( {
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeVertical: function( e ) {
-    this.setData( {
-      vertical: !this.data.vertical
-    })
-  },
-  changeAutoplay: function( e ) {
-    this.setData( {
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function( e ) {
-    this.setData( {
-      interval: e.detail.value
-    })
-  },
-  durationChange: function( e ) {
-    this.setData( {
-      duration: e.detail.value
-    })
-  },
 
   //事件处理函数
   bindViewTap: function() {
@@ -78,6 +53,11 @@ Page( {
       url: '../logs/logs'
     })
   },
+  swiperchange: function(e) {
+    //FIXME: 当前页码
+    //console.log(e.detail.current)
+  },
+
   onLoad: function() {
     console.log( 'onLoad' )
     var that = this
@@ -90,8 +70,6 @@ Page( {
     })
   },
   go: function(event) {
-    console.log(event)
-    console.log(event.currentTarget.dataset.type)
     wx.navigateTo({
       url: '../list/index?type=' + event.currentTarget.dataset.type
     })
